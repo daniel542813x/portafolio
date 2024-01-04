@@ -1,6 +1,6 @@
 import { Paper, Typography,Box, Stack, Avatar, Divider } from "@mui/material";
 import React from "react";
-import picture from "../../../public/foto.jpg";
+import picture from "../../assets/foto.jpg";
 
 const HomePage = () => {
     return (

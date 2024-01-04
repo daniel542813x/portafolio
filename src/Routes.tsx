@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom"
+import Contact from "./components/contact/Contact"
 import  HomePage  from "./components/home/HomePage"
 import { Stack } from "@mui/material"
 const RoutesPage = () => {
     const routes = [
         {name:"Home",path:"/",componet:<HomePage/>},
         {name:"About",path:"/about"},
-        {name:"Contact",path:"/contact"},
+        {name:"Contact",path:"/contact",componet:<Contact/>},
         {name:"Experience",path:"/experience"},
         {name:"Projects",path:"/projects"},
         {name:"Certificates",path:"/certificates"},
