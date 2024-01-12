@@ -2,13 +2,14 @@ import { Routes, Route } from "react-router-dom"
 import Contact from "./components/contact/Contact"
 import  HomePage  from "./components/home/HomePage"
 import  About  from "./components/about/About"
+import Experience  from "./components/experience/"
 import { Stack } from "@mui/material"
 const RoutesPage = () => {
     const routes = [
         {name:"Home",path:"/",componet:<HomePage/>},
         {name:"About",path:"/about",componet:<About/>},
         {name:"Contact",path:"/contact",componet:<Contact/>},
-        {name:"Experience",path:"/experience"},
+        {name:"Experience",path:"/experience",componet:<Experience/>},
         {name:"Projects",path:"/projects"},
         {name:"Certificates",path:"/certificates"},
     ]
