@@ -13,7 +13,6 @@ const Experience = () => {
                 how refactor the react class components to functional components + Typescript,\
                 develop a new features in the frontend and backend, build artificial intelligence integratios, \
                 and SSO login systems with AWS Cognito."
-
         },
     ]
 

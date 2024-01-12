@@ -3,6 +3,8 @@ import Contact from "./components/contact/Contact"
 import  HomePage  from "./components/home/HomePage"
 import  About  from "./components/about/About"
 import Experience  from "./components/experience/"
+import Certifications from "./components/certifications/"
+
 import { Stack } from "@mui/material"
 const RoutesPage = () => {
     const routes = [
@@ -11,7 +13,7 @@ const RoutesPage = () => {
         {name:"Contact",path:"/contact",componet:<Contact/>},
         {name:"Experience",path:"/experience",componet:<Experience/>},
         {name:"Projects",path:"/projects"},
-        {name:"Certificates",path:"/certificates"},
+        {name:"Certificates",path:"/certificates",componet:<Certifications/>},
     ]
 
     return (
