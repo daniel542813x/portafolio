@@ -7,6 +7,7 @@ const About = () => {
                 variant="h3"
                 sx={{
                     fontWeight: "bold",
+                    color: "white",
                     fontFamily: "Raleway",
                     marginTop: 1,
                     marginBottom: 1,

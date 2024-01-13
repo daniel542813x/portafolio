@@ -23,6 +23,7 @@ const Experience = () => {
                     fontWeight: "bold",
                     fontFamily: "Raleway",
                     marginTop: 1,
+                    color: "white",
                     marginBottom: 1,
                     opacity: 0.8,
 

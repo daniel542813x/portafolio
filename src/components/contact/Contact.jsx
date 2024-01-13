@@ -15,6 +15,7 @@ const Contact = () => {
                 sx={{
                     fontWeight: "bold",
                     fontFamily: "Raleway",
+                    color: "white",
                     marginTop: 1,
                     marginBottom: 1,
                     opacity: 0.8,
