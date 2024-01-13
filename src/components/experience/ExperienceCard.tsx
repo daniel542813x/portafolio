@@ -64,12 +64,13 @@ const ExperienceCard : FC<ExperienceProps>= ({businessName,description,role,endD
                         </Typography>
                         <Divider sx={{m:1}} />
                         <Typography variant="body1">
-                            {skills.map((skill:string) => {
+                            {skills.map((skill:string,idx) => {
                                 return (
                                     <Chip 
+                                        key={idx}
                                         sx={{margin:0.2,color:'white',fontFamily:"Raleway"}}
                                         label={skill}
-                                        />
+                                    />
                                 )
                             })}
                         </Typography>

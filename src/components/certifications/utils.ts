@@ -51,5 +51,5 @@ export const getCertificates = (tag:string) => {
 }
 
 export const getFileName = (path:string) => {
-    return path.split("/").pop();
+    return path.split("/").pop()?.split(".")[0].replace(/-/g," ").toUpperCase();
 }
