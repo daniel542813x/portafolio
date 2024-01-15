@@ -1,4 +1,3 @@
-import React from "react";
 import { AppBar, Avatar, Box, Button } from "@mui/material";
 
 const Header = () => {
