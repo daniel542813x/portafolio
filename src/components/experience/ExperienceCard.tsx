@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Chip, Divider, Paper, Stack, Typography } from "@mui/material";
+import { Card, CardContent, CardHeader, Chip, Divider, Paper, Slider, Stack, Typography } from "@mui/material";
 import  { FC } from "react";
 
 interface ExperienceProps{
@@ -27,14 +27,22 @@ const ExperienceCard : FC<ExperienceProps>= ({businessName,description,role,endD
                     fontFamily: "Raleway",
                     marginBottom:2}}
             >
-                <Typography
-                    margin={2}
-                    fontFamily="Raleway"
-                    color={'white'}
-                    variant="h6"
-                >
-                    {startDate} - {endDate}
-                </Typography>
+                <Stack direction={'column'}>
+                    <Typography
+                        margin={2}
+                        fontFamily="Raleway"
+                        color={'white'}
+                        variant="h6"
+                    >
+                        {startDate} - {endDate}
+                    </Typography>
+                    <Slider
+                        sx={{alignSelf:'center',width:10,height:350}}
+                        orientation="vertical"
+                        value={[0,50]}
+                        valueLabelDisplay="off"
+                    />
+                </Stack>
                 <Card sx={{width:300,justifyContent:'flex-start',backgroundColor:'#1F3A5F',color:'white'}}>
                     <CardHeader 
                         justifyContent={'flex-start'}
