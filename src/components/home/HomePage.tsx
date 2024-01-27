@@ -1,7 +1,12 @@
-import { Typography, Stack, Avatar, Divider } from "@mui/material";
+import { Typography, Stack, Avatar, Divider, Link, Button } from "@mui/material";
 import picture from "../../assets/foto.jpg";
 import Skills from "./Skills";
 import { FC } from "react";
+import LinkendIcon from '../../assets/Linkend.png';
+import GitHubIcon from '../../assets/github.png';
+const whatsappLink = "https://github.com/daniel542813x"
+const linkedinLink = "https://www.linkedin.com/in/daniel-estevan-madro%C3%B1ero-moreno-50020a1a8/"
+
 
 const HomePage : FC = () => {
     return (
@@ -105,7 +110,23 @@ const HomePage : FC = () => {
                             usign genereative models from Aws BedRock for interactions with users and Private Data.
 
                         </Typography>
-                        <Divider sx={{marginTop: 2, marginBottom: 2}}/>
+                        <Divider sx={{marginTop: 2, marginBottom: 1}}/>
+                        <Stack justifyContent={'flex-start'} flexDirection={'row'}>
+                            <Button
+                                sx={{ width: 50 }}
+                                autoCapitalize="false"
+                                startIcon={<img style={{width:30}} src={LinkendIcon} alt="linkedin" />}
+                                href={linkedinLink}
+                                target="_blank"
+                            />
+                            <Button
+                                sx={{ width: 50 }}
+                                autoCapitalize="false"
+                                startIcon={<img style={{width:30}} src={GitHubIcon} alt="linkedin" />}
+                                href={whatsappLink}
+                                target="_blank"
+                            />
+                        </Stack>
                     </Stack>
                     <Skills/>
             </Stack>

@@ -29,7 +29,10 @@ const Skills : FC = () => {
                         marginBottom: 0.5,
                     }}
                 >
-                    <Typography marginRight={1}>
+                    <Typography 
+                        color={'green'}
+                        marginRight={1}
+                    >
                         {skill.name}
                     </Typography>
                     <Slider
