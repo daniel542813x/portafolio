@@ -49,7 +49,7 @@ const Certifications = () => {
                                                 margin:'10px',
                                             }}
                                         >
-                                                <iframe 
+                                                <img 
                                                     src={files_.path} 
                                                     style={{
                                                         width:350,
