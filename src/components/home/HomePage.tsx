@@ -1,4 +1,4 @@
-import { Typography, Stack, Avatar, Divider, Link, Button } from "@mui/material";
+import { Typography, Stack, Avatar, Divider, Button } from "@mui/material";
 import picture from "../../assets/foto.jpg";
 import Skills from "./Skills";
 import { FC } from "react";
