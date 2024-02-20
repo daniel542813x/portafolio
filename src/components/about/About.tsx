@@ -11,7 +11,7 @@ const About = () => {
                     fontWeight: "bold",
                     color: "white",
                     fontFamily: "Raleway",
-                    marginTop: 1,
+                    marginTop: isMobile ? '10%' : '1%',
                     marginBottom: 1,
                     opacity: 0.8,
 
@@ -104,7 +104,7 @@ const About = () => {
                     alt="full body" 
                     width="300"
                     height="400"
-                    style={{borderRadius: '50%', shapeOutside: 'circle(50%)'}}
+                    style={{borderRadius: '50%', shapeOutside: 'circle(50%)', alignSelf: 'center'}}
                 />
             </Stack>
         </Stack>

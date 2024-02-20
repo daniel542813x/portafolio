@@ -18,7 +18,7 @@ const Contact : FC= () => {
                     fontWeight: "bold",
                     fontFamily: "Raleway",
                     color: "white",
-                    marginTop: 1,
+                    marginTop: isMobile ? '10%' : '1%',
                     marginBottom: 1,
                     opacity: 0.8,
 
