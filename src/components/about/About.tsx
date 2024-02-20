@@ -1,6 +1,8 @@
 import { Stack, Typography } from "@mui/material";
 import fullbody from "../../assets/fullbody.jpg"
+import { IsMobile } from "../../utils/helpers";
 const About = () => {
+    const isMobile = IsMobile();
     return (
         <Stack flexDirection={'column'}>
             <Typography 
@@ -18,10 +20,10 @@ const About = () => {
                 About me 
             </Typography>
             <Stack 
-                direction={'row'} 
-                marginLeft={'20%'}
+                direction={isMobile ? 'column' : 'row'} 
+                marginLeft={isMobile ? 0 : '20%'}
                 marginTop={'2%'}
-                width={'70%'}
+                width={isMobile ? '100%' : '70%'}
             >
                 <Stack flexDirection={'column'}>
                     <Typography 
@@ -100,7 +102,7 @@ const About = () => {
                 
                 <img src={fullbody} 
                     alt="full body" 
-                    width="300" 
+                    width="300"
                     height="400"
                     style={{borderRadius: '50%', shapeOutside: 'circle(50%)'}}
                 />

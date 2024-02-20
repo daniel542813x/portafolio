@@ -4,20 +4,21 @@ import Skills from "./Skills";
 import { FC } from "react";
 import LinkendIcon from '../../assets/Linkend.png';
 import GitHubIcon from '../../assets/github.png';
+import { IsMobile } from "../../utils/helpers";
 const whatsappLink = "https://github.com/daniel542813x"
 const linkedinLink = "https://www.linkedin.com/in/daniel-estevan-madro%C3%B1ero-moreno-50020a1a8/"
 
-
 const HomePage : FC = () => {
+    const isMobile = IsMobile();
     return (
         <Stack
             sx={{
                 marginTop: 10,
-                marginLeft: '15%',
+                marginLeft: isMobile ? 0 : '15%',
                 justifyContent: "flex-start",
             }} 
             >
-                <Stack flexDirection={'row'}>
+                <Stack flexDirection={isMobile ? 'column' : 'row'}>
                     <Avatar 
                         src={picture} 
                         sx={{
@@ -25,7 +26,9 @@ const HomePage : FC = () => {
                             height: 150,
                             marginRight: 5,
                             border: "5px solid green",
+                            alignSelf: isMobile ? 'center' : 'flex-start'
                         }}
+                        
                     />
                     <Stack sx={{justifyContent:"flex-start"}}>
                         <Typography 
@@ -74,10 +77,10 @@ const HomePage : FC = () => {
                     sx={{
                         marginTop: 5,
                         width: "100%",
-                        flexDirection: "row",
+                        flexDirection: isMobile ? 'column' : 'row',
                     }}
                 >
-                    <Stack width={'60%'}>
+                    <Stack width={isMobile ? '100%' : '60%'}>
                         <Typography 
                             variant="subtitle1"
                             textAlign={'left'}
@@ -111,7 +114,7 @@ const HomePage : FC = () => {
 
                         </Typography>
                         <Divider sx={{marginTop: 2, marginBottom: 1}}/>
-                        <Stack justifyContent={'flex-start'} flexDirection={'row'}>
+                        <Stack justifyContent={isMobile ? 'center' : 'flex-start'} flexDirection={'row'}>
                             <Button
                                 sx={{ width: 50 }}
                                 autoCapitalize="false"
