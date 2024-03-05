@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import fullbody from "../../assets/fullbody.jpg"
+//import fullbody from "../../assets/fullbody.jpg"
 import { IsMobile } from "../../utils/helpers";
 const About = () => {
     const isMobile = IsMobile();

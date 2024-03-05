@@ -1,13 +1,13 @@
 import { Typography,Link, Stack, Button } from "@mui/material";
 import LinkendIcon from '../../assets/Linkend.png';
 import GmailIcon from '../../assets/email.png';
-import WhatsAppIcon from '../../assets/whatsapp.png';
+//import WhatsAppIcon from '../../assets/whatsapp.png';
 import contactImage from '../../assets/contact.png';
 import { FC } from "react";
 import { IsMobile } from "../../utils/helpers";
 
 const Contact : FC= () => {
-    const whatsappLink = "https://api.whatsapp.com/send/?phone=%2B573146075667&text&type=phone_number&app_absent=0"
+    //const whatsappLink = "https://api.whatsapp.com/send/?phone=%2B573146075667&text&type=phone_number&app_absent=0"
     const linkedinLink = "https://www.linkedin.com/in/daniel-estevan-madro%C3%B1ero-moreno-50020a1a8/"
     const isMobile = IsMobile();
     return (
