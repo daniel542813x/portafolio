@@ -47,18 +47,6 @@ const Contact : FC= () => {
                             LinkedIn
                         </Link>
                     </Button>
-                    <Button
-                        sx={{ width: 120 }}
-                        autoCapitalize="false"
-                        startIcon={<img style={{width:30}} src={WhatsAppIcon} alt="linkedin" />}
-                    >
-                        <Link href={whatsappLink} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                        >
-                            WhatsApp
-                        </Link>
-                    </Button>
                 <Typography 
                     alignContent={'normal'} 
                     sx={{display:'flex', alignItems:'center', marginTop:0.5}} 

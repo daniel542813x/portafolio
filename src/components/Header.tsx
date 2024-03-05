@@ -1,6 +1,7 @@
 import { AppBar, Avatar, Box, Button, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react';
+//        { name: "Projects", path: "/projects" },
 
 const Header = () => {
     const paths = [
@@ -8,7 +9,6 @@ const Header = () => {
         { name: "About", path: "/about" },
         { name: "Contact", path: "/contact" },
         { name: "Experience", path: "/experience" },
-        { name: "Projects", path: "/projects" },
         { name: "Certificates", path: "/certificates" },
     ];
 

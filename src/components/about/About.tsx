@@ -100,12 +100,12 @@ const About = () => {
                     </Typography>
                 </Stack>
                 
-                <img src={fullbody} 
+                {/*<img src={fullbody} 
                     alt="full body" 
                     width="300"
                     height="400"
                     style={{borderRadius: '50%', shapeOutside: 'circle(50%)', alignSelf: 'center'}}
-                />
+                    />*/}
             </Stack>
         </Stack>
     );
