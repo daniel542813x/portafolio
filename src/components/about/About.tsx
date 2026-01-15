@@ -37,9 +37,9 @@ const About = () => {
                         }}
                         width={'100%'}
                     >
-                        I am a System Engineer with a passion for creating and building things.
-                        I am a graduate of the University of Nariño at Colombia. 
-                        I have experience in full stack development, machine learning and Cloud Computing. {'\n'}
+                        I am a Systems Engineer with 4 years of professional experience and a passion for creating and building things.
+                        I am a graduate of the University of Nariño in Colombia with diplomas in New and Emerging Technologies,
+                        and Entrepreneurship and Leadership. I specialize in full-stack development, AI/ML engineering, and Cloud Computing. {'\n'}
                     </Typography>
                     <Typography 
                         variant="subtitle1"

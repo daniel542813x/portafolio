@@ -8,7 +8,7 @@ import { IsMobile } from "../../utils/helpers";
 
 const Contact : FC= () => {
     //const whatsappLink = "https://api.whatsapp.com/send/?phone=%2B573146075667&text&type=phone_number&app_absent=0"
-    const linkedinLink = "https://www.linkedin.com/in/daniel-estevan-madro%C3%B1ero-moreno-50020a1a8/"
+    const linkedinLink = "https://www.linkedin.com/in/dmadronero"
     const isMobile = IsMobile();
     return (
         <div>

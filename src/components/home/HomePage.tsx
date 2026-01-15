@@ -5,8 +5,8 @@ import { FC } from "react";
 import LinkendIcon from '../../assets/Linkend.png';
 import GitHubIcon from '../../assets/github.png';
 import { IsMobile } from "../../utils/helpers";
-const whatsappLink = "https://github.com/daniel542813x"
-const linkedinLink = "https://www.linkedin.com/in/daniel-estevan-madro%C3%B1ero-moreno-50020a1a8/"
+const githubLink = "https://github.com/daniel542813x"
+const linkedinLink = "https://www.linkedin.com/in/dmadronero"
 
 const HomePage : FC = () => {
     const isMobile = IsMobile();
@@ -19,16 +19,20 @@ const HomePage : FC = () => {
             }} 
             >
                 <Stack flexDirection={isMobile ? 'column' : 'row'}>
-                    <Avatar 
-                        src={picture} 
+                    <Avatar
+                        src={picture}
                         sx={{
                             width: 150,
                             height: 150,
                             marginRight: 5,
                             border: "5px solid green",
-                            alignSelf: isMobile ? 'center' : 'flex-start'
+                            alignSelf: isMobile ? 'center' : 'flex-start',
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                                transform: 'scale(1.05)',
+                                boxShadow: '0 0 20px rgba(76, 175, 80, 0.5)',
+                            }
                         }}
-                        
                     />
                     <Stack sx={{justifyContent:"flex-start"}}>
                         <Typography 
@@ -58,8 +62,8 @@ const HomePage : FC = () => {
                         >
                             Daniel E. Madroñero.
                         </Typography>
-                        <Typography 
-                            variant="h3" 
+                        <Typography
+                            variant="h3"
                             sx={{
                                 alignSelf:'flex-start',
                                 fontWeight: "bold",
@@ -67,9 +71,9 @@ const HomePage : FC = () => {
                                 fontFamily: "Raleway",
 
                                 opacity: 0.5,
-                            }} 
+                            }}
                         >
-                            I'm a full-stack web developer.
+                            I'm a FullStack Developer & AI Engineer.
                         </Typography>
                     </Stack>
                 </Stack>
@@ -81,7 +85,7 @@ const HomePage : FC = () => {
                     }}
                 >
                     <Stack width={isMobile ? '100%' : '60%'}>
-                        <Typography 
+                        <Typography
                             variant="subtitle1"
                             textAlign={'left'}
                             sx={{
@@ -91,10 +95,10 @@ const HomePage : FC = () => {
                                 opacity: 0.8,
                             }}
                         >
-                            I'm Enginner System focused on web devepement,
-                            I have experience in web applications with React + Typescript in the frontend 
-                            and Python/Flask in the backend. I have also worked with databases such as 
-                            PostgreSQL and MySQL and I have experience with Kubernets/Docker and AWS (Cognito, S3, EKS).
+                            I'm a Systems Engineer with 4 years of professional experience in full-stack development
+                            and AI engineering. I specialize in building modern web applications with React + TypeScript
+                            in the frontend and Python (FastAPI/Flask) in the backend. I have extensive experience with
+                            cloud infrastructure (AWS, Kubernetes, Docker) and databases (PostgreSQL, MySQL).
                         </Typography>
                         <Typography
                             variant="subtitle1"
@@ -107,26 +111,38 @@ const HomePage : FC = () => {
                                 opacity: 0.8,
                             }}
                         >
-                            Additionally I have experience with Machine Learning and Deep Learning, from 
-                            multuples courses and projects I have done in the past. In my work I have been
-                            working on  integrations with OpenIA services as GPT, also building a chatbots
-                            usign genereative models from Aws BedRock for interactions with users and Private Data.
-
+                            I specialize in AI/ML integrations, building production-ready chatbots with RAG architectures
+                            using LangChain, OpenAI APIs, and Amazon Bedrock. I've implemented SSO authentication (SAML 2.0),
+                            monitoring systems (Prometheus/Grafana), automation workflows (n8n, Zapier, Selenium), and
+                            speech-to-text solutions with speaker diarization. I'm experienced in DevOps practices,
+                            including CI/CD, containerization, and cloud infrastructure management.
                         </Typography>
                         <Divider sx={{marginTop: 2, marginBottom: 1}}/>
-                        <Stack justifyContent={isMobile ? 'center' : 'flex-start'} flexDirection={'row'}>
+                        <Stack justifyContent={isMobile ? 'center' : 'flex-start'} flexDirection={'row'} gap={1}>
                             <Button
-                                sx={{ width: 50 }}
+                                sx={{
+                                    width: 50,
+                                    transition: 'all 0.3s ease',
+                                    '&:hover': {
+                                        transform: 'translateY(-3px) scale(1.1)',
+                                    }
+                                }}
                                 autoCapitalize="false"
                                 startIcon={<img style={{width:30}} src={LinkendIcon} alt="linkedin" />}
                                 href={linkedinLink}
                                 target="_blank"
                             />
                             <Button
-                                sx={{ width: 50 }}
+                                sx={{
+                                    width: 50,
+                                    transition: 'all 0.3s ease',
+                                    '&:hover': {
+                                        transform: 'translateY(-3px) scale(1.1)',
+                                    }
+                                }}
                                 autoCapitalize="false"
-                                startIcon={<img style={{width:30}} src={GitHubIcon} alt="linkedin" />}
-                                href={whatsappLink}
+                                startIcon={<img style={{width:30}} src={GitHubIcon} alt="github" />}
+                                href={githubLink}
                                 target="_blank"
                             />
                         </Stack>

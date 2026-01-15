@@ -2,6 +2,8 @@ import './App.css'
 import { Box, Stack } from '@mui/material'
 import Header from './components/Header'
 import RoutesPage from './Routes'
+import BackToTop from './components/common/BackToTop'
+
 function App() {
   return (
     <Box>
@@ -9,6 +11,7 @@ function App() {
         <Header/>
       </Stack>
         <RoutesPage/>
+        <BackToTop/>
     </Box>
   )
 }
