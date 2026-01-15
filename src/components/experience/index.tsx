@@ -1,13 +1,14 @@
 import ExperienceCard  from "./ExperienceCard";
-import { Divider, Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography, Box } from "@mui/material";
 import FadeInSection from "../common/FadeInSection";
+
 const Experience = () => {
     const experiences = [
         {
             businessName:"AQUINAS NETWORK",
             role:"Mid-Senior Developer",
-            startDate:"2024",
-            endDate:"2025",
+            startDate:"Apr 2024",
+            endDate:"Jan 2026",
             skills:["FastAPI","Tortoise ORM","MySQL","Docker","Linux","LangChain","AI Agents","RAG","n8n","Zapier","Selenium","Meta API","Speech-to-text"],
             description:"Designed and deployed backend systems for form management and student enrollment platforms. \
                 Implemented automated marketing metrics extraction and AI agents with RAG solutions using LangChain. \
@@ -62,41 +63,85 @@ const Experience = () => {
                 }
             ]
         },
-    ]
+    ];
 
-    return <Stack flexDirection={'column'}>
-            <Typography marginTop={3}  
-                variant="h3"
+    return (
+        <Box
+            sx={{
+                minHeight: '100vh',
+                background: 'linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%)',
+                position: 'relative',
+                overflow: 'hidden',
+                paddingBottom: 8,
+            }}
+        >
+            {/* Animated Background Elements */}
+            <Box
                 sx={{
-                    fontWeight: "bold",
-                    fontFamily: "Raleway",
-                    marginTop: 1,
-                    color: "white",
-                    marginBottom: 1,
-                    opacity: 0.8,
+                    position: 'absolute',
+                    width: '500px',
+                    height: '500px',
+                    borderRadius: '50%',
+                    background: 'radial-gradient(circle, rgba(166, 74, 255, 0.08) 0%, transparent 70%)',
+                    bottom: '-200px',
+                    left: '-150px',
+                    animation: 'pulse 12s ease-in-out infinite',
+                    '@keyframes pulse': {
+                        '0%, 100%': { transform: 'scale(1)', opacity: 0.4 },
+                        '50%': { transform: 'scale(1.3)', opacity: 0.2 },
+                    }
+                }}
+            />
 
-                }}>
-                    Somes Experiences
-            </Typography>
-            <Divider sx={{m:1,background:'#a64aff'}} />
-        <Stack flexDirection={'column'} alignItems={'center'} margin={3}>
-        {
-            experiences.map((experience, index) => {
-                return <FadeInSection key={index} delay={index * 200}>
-                    <ExperienceCard
-                        businessName={experience.businessName}
-                        description={experience.description}
-                        endDate={experience.endDate}
-                        role={experience.role}
-                        skills={experience.skills}
-                        startDate={experience.startDate}
-                        projects={experience.projects}
-                    />
+            <Stack
+                sx={{
+                    maxWidth: '1400px',
+                    margin: '0 auto',
+                    padding: { xs: 3, md: 6 },
+                    position: 'relative',
+                    zIndex: 1,
+                }}
+            >
+                {/* Header */}
+                <FadeInSection delay={0}>
+                    <Box sx={{ marginBottom: 6 }}>
+                        <Typography
+                            variant="h2"
+                            sx={{
+                                fontWeight: 'bold',
+                                color: 'white',
+                                fontFamily: 'Raleway',
+                                marginBottom: 2,
+                                background: 'linear-gradient(135deg, #ffffff 0%, #a64aff 100%)',
+                                backgroundClip: 'text',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                            }}
+                        >
+                            Professional Experience
+                        </Typography>
+                        <Divider sx={{ background: 'linear-gradient(90deg, #a64aff 0%, transparent 100%)', height: 3, border: 'none' }} />
+                    </Box>
                 </FadeInSection>
-            })
-        }
-        </Stack>
-    </Stack>;
+
+                <Stack flexDirection="column" alignItems="center">
+                    {experiences.map((experience, index) => (
+                        <FadeInSection key={index} delay={index * 200}>
+                            <ExperienceCard
+                                businessName={experience.businessName}
+                                description={experience.description}
+                                endDate={experience.endDate}
+                                role={experience.role}
+                                skills={experience.skills}
+                                startDate={experience.startDate}
+                                projects={experience.projects}
+                            />
+                        </FadeInSection>
+                    ))}
+                </Stack>
+            </Stack>
+        </Box>
+    );
 }
 
 export default Experience;

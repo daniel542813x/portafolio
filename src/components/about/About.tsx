@@ -28,7 +28,7 @@ const About = () => {
             icon: <SchoolIcon sx={{ fontSize: 40 }} />
         },
         {
-            year: "2022-Present",
+            year: "2022-2026",
             title: "Professional Career",
             description: "4 years of experience specializing in full-stack development, AI/ML engineering, and Cloud Computing.",
             icon: <EmojiEventsIcon sx={{ fontSize: 40 }} />

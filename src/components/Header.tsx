@@ -38,7 +38,7 @@ const Header = () => {
                 sx={{
                     width: 50,
                     height: 50,
-                    marginLeft: 5,
+                    marginLeft: { xs: 2, md: 5 },
                 }}
                 alt="Remy Sharp"
                 src="https://avatars1.githubusercontent.com/u/60397100?v=4"
